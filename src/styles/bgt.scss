@@ -1,0 +1,35 @@
+  
+  @keyframes square {
+    @for $i from 1 through 50 {
+      #{($i * 2%)} {
+        transform: translate3d( (random(10) * 30px) , (random(10) * -20px), (random(10) * 20px) ) scale(random(5)) rotate((random(500) * 1deg));
+        // background: hsla(random(10), 50%, 50%, .03);
+        background-color:rgba(random(100), 209, 209, .03);
+      }
+    }
+  }
+  
+  .context {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    margin-top: 200px;
+    perspective: 2000px;
+    transform-style: preserve-3d;    
+  }
+  
+  .square {
+    border: 1px solid transparent;
+    height: 500px;
+    width: 20px;
+    position: absolute;
+    animation: square 130s linear infinite alternate;
+  }
+  
+  @for $i from 1 through 10 {
+    .square:nth-child(#{$i}){
+      animation-delay: ($i * -.15s);
+      transform: translateZ($i * 20px);
+    }
+  }
+  

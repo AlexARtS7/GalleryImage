@@ -1,0 +1,101 @@
+.gallery {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    &_id {
+        position: absolute;
+        bottom: 5px;
+        right: 30px;
+        color: white;
+        font-size: 10px;
+    }
+    &_list {
+        width: 100%;
+    }
+    &_item {
+        background-color: rgba(167, 203, 234, .4);
+        border-radius: 20px;
+        margin: 20px 50px;
+        height: 200px;
+        padding: 10px 20px;
+        position: relative;
+    }
+    &_img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        &_placeholder {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        &_title {
+            font-size: 26px;
+            text-decoration: underline;
+            // color: rgb(237, 253, 135);
+        }
+        &_block {
+            width: 250px;
+            height: 100%;
+            border-radius: 10px;
+            padding: 2px;
+            background-color:rgb(226, 235, 243);
+        }
+    }    
+    &_description {
+        &_block {
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            height: 100%;
+            width: calc(100% - 270px);
+        }
+    }
+    &_buttons {
+        &_edit {
+            right: 60px;
+            height: 30px;
+            position: absolute;
+            border-radius: 5px;
+            background-color:rgba(40, 59, 59, .1);
+            color: white;
+            cursor: pointer;
+            opacity: .3;
+            transition: .2s;
+            box-shadow: 2px 2px 1px black;
+            &:hover {
+                opacity: .8;
+            }
+        }   
+        &_delete {
+            right: 20px;
+            height: 30px;
+            position: absolute;
+            border-radius: 5px;
+            background-color:rgba(40, 59, 59, .1);
+            color: white;
+            cursor: pointer;
+            opacity: .3;
+            transition: .2s;
+            box-shadow: 2px 2px 1px black;
+            &:hover {
+                opacity: .8;
+            }
+        }            
+    }
+    &_add {
+        width: 120px;
+        position: fixed;
+        bottom: 30px;
+        right: 80px;
+        opacity: .3;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+            opacity: .9;
+            transform: scale(1.2);
+        }
+    }
+}
+
+

@@ -1,0 +1,104 @@
+.edit {
+    width: 600px;
+    height: 400px;
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+    position: fixed;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(254, 255, 253, .9);
+    box-shadow: 2px 2px 4px black;
+    &_back {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+    &_textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        resize: none;
+    }
+    &_buttons {
+        height: 32px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        &_cancel {
+            padding: 0 30px;
+            cursor: pointer;
+            &:hover {
+                background-color: rgb(243, 159, 159);
+            }
+        }
+        &_save {
+            margin-left: 20px;
+            padding: 0 30px;
+            cursor: pointer;
+            &:hover {
+                background-color: rgb(141, 238, 130);
+            }
+        }
+    }
+}
+
+.preview {
+    height: 80%;
+    top: calc(50% - 40%);
+    position: fixed;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: rgba(254, 255, 253, .9);
+    box-shadow: 2px 2px 4px black;
+    &_back {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+    &_img {
+        height: 100%;
+        border-radius: 15px;
+        // width: 100%;
+    }
+}
+
+.add {
+    width: 600px;
+    height: 80%;
+    left: calc(50% - 300px);
+    top: calc(50% - 40%);
+    position: fixed;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(254, 255, 253, .9);
+    box-shadow: 2px 2px 4px black;
+    &_back {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+    &_input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 5px;
+        &_label {
+            margin-bottom: 5px;
+        }
+    }
+    &_textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        resize: none;
+    }
+    &_errors {
+        font-size: 12px;
+        color: red;
+    }
+}
